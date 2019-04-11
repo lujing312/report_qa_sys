@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>客服问答系统</title>
+  <style>
+    .container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner {
+      overflow: hidden;
+      padding: 20px;
+      width: 25pc;
+      border: 1px solid #ebeef5;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 9pt 0 rgba(0, 0, 0, .1);
+      color: #303133;
+      text-align: center;
+      transition: .3s
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 24px
+    }
+
+    .el-form-item {
+      margin-bottom: 20px
+    }
+
+    .el-form-item__label {
+      float: left;
+      box-sizing: border-box;
+      padding: 0 9pt 0 0;
+      width: 5pc;
+      color: #606266;
+      vertical-align: middle;
+      text-align: right;
+      font-size: 14px;
+      line-height: 40px
+    }
+
+    .el-form-item__content {
+      position: relative;
+      margin-left: 5pc;
+      font-size: 14px;
+      line-height: 40px
+    }
+
+    .el-input {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      font-size: 14px
+    }
+
+    .el-input:before {
+      display: table;
+      content: ""
+    }
+
+    .el-input__inner {
+      padding: 0 15px;
+      width: 80%;
+      height: 40px;
+      background-color: #fff;
+      background-image: none;
+      font-size: inherit;
+      line-height: 40px;
+      transition: border-color .2s cubic-bezier(.645, .045, .355, 1)
+    }
+
+    .el-button,
+    .el-input__inner {
+      display: inline-block;
+      box-sizing: border-box;
+      outline: 0;
+      border: 1px solid #dcdfe6;
+      border-radius: 4px;
+      color: #606266;
+      -webkit-appearance: none
+    }
+
+    .el-button {
+      margin: 0;
+      padding: 9pt 20px;
+      border-color: #dcdfe6;
+      background: #fff;
+      text-align: center;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      transition: .1s;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none
+    }
+
+    .el-button--primary {
+      border-color: #409eff;
+      background-color: #409eff;
+      color: #fff
+    }
+
+    .el-button--primary:focus,
+    .el-button--primary:hover {
+      border-color: #66b1ff;
+      background: #66b1ff;
+      color: #fff
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form class="inner" action="/qaservice/login" method="post">
+      <p class="title">欢迎登录报告问答管理系统</p>
+      <div class="el-form-item">
+        <label class="el-form-item__label">用户名</label>
+        <div class="el-form-item__content">
+          <div class="el-input">
+            <input name="username" type="text" class="el-input__inner" required>
+          </div>
+        </div>
+      </div>
+      <div class="el-form-item">
+        <label class="el-form-item__label">密码</label>
+        <div class="el-form-item__content">
+          <div class="el-input">
+            <input name="password" type="password" class="el-input__inner" required>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="el-button el-button--primary">
+        <span>登录</span>
+      </button>
+    </form>
+  </div>
+</body>
+</html>

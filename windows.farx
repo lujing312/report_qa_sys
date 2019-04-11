@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoResponder LastSave="2018-11-26T10:51:08.6662181+08:00" FiddlerVersion="5.0.20182.28034">
+  <State Enabled="true" Fallthrough="true" UseLatency="true">
+    <ResponseRule Match="regex:http://127.0.0.1:8082/qaservice/(?&lt;params&gt;.*)" Action="http://39.105.214.58:8080/qaservice/${params}" Enabled="true" />
+    <ResponseRule Match="regex:http://127.0.0.1:8082/qaweb/login.html" Action="http://39.105.214.58:8080/qaweb/login.html" Enabled="true" />
+  </State>
+</AutoResponder>
